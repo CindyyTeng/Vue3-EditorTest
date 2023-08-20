@@ -82,5 +82,28 @@ namespace FlexCoreService.Controllers
             return Ok("成功預約!");
 
         }
+
+
+        [HttpPost("AddComment")]
+        public async Task<IEnumerable<ReservationCommentDTO>> AddCommentAsync (AddReservationCommentVM vm)
+        {
+            var dto = vm.ToDto();
+            var result =await _service.AddReservationCommentAsync(dto);
+
+             return result;
+        }
+
+        [HttpGet("GetAllComment{id}")]
+        public async Task<IEnumerable<ReservationCommentVM>> GetAllCommentAsync (int id)
+        {
+            var comments = await _service.GetAllCommentAsync(id);
+            var result = comments.Select(c => c.ToVM());
+            if (result.Count() == 0)
+            {
+                Enumerable.Empty<ReservationCommentVM>();
+            }
+            return result;
+        }
+
     }
 }

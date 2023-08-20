@@ -13,5 +13,9 @@ namespace FlexCoreService.ActivityCtrl.Interface
         Task<IEnumerable<ReservationHistoryDTO>> GetReservationHistoryAsync(int id);
 
         Task AddReservationAsync(AddReservationDTO dto);
+
+        Task AddReservationCommentAsync(AddReservationCommentDTO dto);
+
+        Task<IEnumerable<ReservationCommentDTO>> GetAllCommentAsync(int id);
     }
 }

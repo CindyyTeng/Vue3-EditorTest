@@ -41,5 +41,18 @@ namespace FlexCoreService.ActivityCtrl.Service
             await _repo.AddReservationAsync(dto);
             
         }
+
+        public async Task<IEnumerable<ReservationCommentDTO>> AddReservationCommentAsync(AddReservationCommentDTO dto)
+        {
+            await _repo.AddReservationCommentAsync(dto);
+            var result = await _repo.GetAllCommentAsync(dto.fk_speakerId);
+            return result;
+        }
+
+        public async Task<IEnumerable<ReservationCommentDTO>> GetAllCommentAsync(int id)
+        {
+            var result = await _repo.GetAllCommentAsync(id);
+            return result;
+        }
     }
 }
