@@ -12,6 +12,7 @@ import ReservationIndex from "../views/reservation/ReservationIndex.vue";
 import SpeakerInfo from "../views/reservation/SpeakerInfo.vue";
 import Comment from "../views/reservation/Comment.vue";
 import Community from "../views/activity/Community.vue";
+import Community222 from '../views/activity/Community222.vue';
 const webTitle = "FLEX - ";
 
 // 路由設定
@@ -92,6 +93,11 @@ const routes = [
   {
     path: "/community",
     component: Community,
+    meta: { title: `${webTitle}討論區` },
+  },
+  {
+    path: "/community222",
+    component: Community222,
     meta: { title: `${webTitle}討論區` },
   },
   {

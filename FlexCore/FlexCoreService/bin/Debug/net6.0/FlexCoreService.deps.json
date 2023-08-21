@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.20",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "ECPay.Payment.Integration": "1.0.0.7"
         },
         "runtime": {
           "FlexCoreService.dll": {}
@@ -2538,6 +2539,14 @@
         "runtime": {
           "EFModels.dll": {}
         }
+      },
+      "ECPay.Payment.Integration/1.0.0.7": {
+        "runtime": {
+          "ECPay.Payment.Integration.dll": {
+            "assemblyVersion": "1.0.0.7",
+            "fileVersion": "1.0.0.7"
+          }
+        }
       }
     }
   },
@@ -4103,6 +4112,11 @@
     },
     "EFModels/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ECPay.Payment.Integration/1.0.0.7": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
